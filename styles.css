@@ -248,3 +248,64 @@ canvas {
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 修复了阴影样式，确保阴影效果清晰并增强视觉效果 */
 }
+
+/* 添加标题样式 */
+.gallery-title {
+    padding: 30px 0;
+    position: relative;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    letter-spacing: 0.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+}
+
+.english-title {
+    font-size: 1.5rem;
+    color: #6c757d;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 添加响应式样式 */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .english-title {
+        font-size: 1.2rem;
+        letter-spacing: 0.3em;
+    }
+}
+
+/* 添加悬停效果 */
+.gallery-title:hover .main-title {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-title:hover .english-title {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
