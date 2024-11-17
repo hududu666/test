@@ -23,7 +23,14 @@
                                         <label class="form-check-label" for="randomAll">
                                             完全随机生成
                                         </label>
-                                        <small class="text-muted d-block">取消勾选可以指定具体参数</small>
+                                        <div class="mt-2">
+                                            <input class="form-check-input" type="checkbox" id="fictionMode">
+                                            <label class="form-check-label" for="fictionMode">
+                                                开启虚构模式
+                                            </label>
+                                        </div>
+                                        <small class="text-muted d-block">取消勾选随机生成可以指定具体参数</small>
+                                        <small class="text-muted d-block fiction-hint" style="display: none;">虚构模式：生成搞笑有趣的艺术信息</small>
                                     </div>
                                 </div>
                             </div>
@@ -33,9 +40,12 @@
                             <div class="mb-3">
                                 <label class="form-label">图片尺寸</label>
                                 <select class="form-select" id="imageSize">
-                                    <option value="small">小图 (300x300)</option>
-                                    <option value="medium">中图 (500x500)</option>
-                                    <option value="large">大图 (800x800)</option>
+                                    <option value="square">方形 (500x500)</option>
+                                    <option value="landscape">横版 (600x400)</option>
+                                    <option value="portrait">竖版 (400x600)</option>
+                                    <option value="wide">宽幅 (800x400)</option>
+                                    <option value="tall">高幅 (400x800)</option>
+                                    <option value="panorama">全景 (900x300)</option>
                                 </select>
                             </div>
                             
@@ -49,6 +59,20 @@
                                     <option value="gradient">渐变</option>
                                     <option value="mosaic">马赛克</option>
                                     <option value="wave">波浪</option>
+                                    <option value="pixelated">像素化</option>
+                                    <option value="dotted">点阵</option>
+                                    <option value="lines">线条</option>
+                                    <option value="spiral">螺旋</option>
+                                    <option value="noise">噪点</option>
+                                    <option value="cellular">细胞</option>
+                                    <option value="fractal">分形</option>
+                                    <option value="symmetry">对称</option>
+                                    <option value="fluid">流体</option>
+                                    <option value="particle">粒子</option>
+                                    <option value="glitch">故障</option>
+                                    <option value="circuit">电路</option>
+                                    <option value="organic">有机</option>
+                                    <option value="crystal">晶体</option>
                                 </select>
                             </div>
 
@@ -63,6 +87,19 @@
                                     <option value="rainbow">彩虹色</option>
                                     <option value="forest">森林色系</option>
                                     <option value="ocean">海洋色系</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">背景色调</label>
+                                <select class="form-select" id="bgTheme">
+                                    <option value="white">纯白</option>
+                                    <option value="cream">米色</option>
+                                    <option value="lightGray">浅灰</option>
+                                    <option value="darkGray">深灰</option>
+                                    <option value="kraft">牛皮纸</option>
+                                    <option value="coffee">咖啡色</option>
+                                    <option value="black">纯黑</option>
                                 </select>
                             </div>
                         </div>

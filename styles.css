@@ -1,19 +1,53 @@
 canvas {
     max-width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     display: none;
     touch-action: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    background-clip: padding-box;
 }
 
 .card {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .btn {
     font-weight: 500;
     padding: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.2);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
 }
 
 @media (max-width: 768px) {
@@ -41,24 +75,73 @@ canvas {
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: left;
+    animation: slideUp 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .artwork-title {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.artwork-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.artwork-section:hover {
+    background: #ffffff;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.artwork-section h4 {
+    color: #007bff;
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.artwork-details p {
-    margin-bottom: 8px;
+.artwork-section p {
+    margin-bottom: 12px;
     line-height: 1.6;
+    color: #495057;
 }
 
-.artwork-details strong {
-    color: #555;
+.artwork-section strong {
+    color: #2c3e50;
     margin-right: 8px;
+    font-weight: 600;
+}
+
+.artwork-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.artwork-section ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e9ecef;
+    color: #495057;
+}
+
+.artwork-section ul li:last-child {
+    border-bottom: none;
 }
 
 .random-toggle-container {
@@ -97,4 +180,72 @@ canvas {
     color: #6c757d;
     font-size: 0.8em;
     text-align: center;
-} 
+}
+
+.canvas-container {
+    padding: 40px;
+    background: #f8f9fa;
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+    transition: all 0.5s ease;
+    animation: slideIn 0.8s ease-out;
+    box-shadow: 
+        0 0 0 var(--frame-inner-width, 20px) #fff,
+        0 0 0 calc(var(--frame-inner-width, 20px) + 1px) var(--frame-inner-color, #d4af37),
+        0 0 0 var(--frame-outer-width, 25px) var(--frame-outer-color, #8b4513),
+        0 0 15px var(--frame-outer-width, 25px) rgba(0,0,0,0.2);
+}
+
+.canvas-container:hover {
+    box-shadow: 
+        0 0 0 var(--frame-inner-width, 20px) #fff,
+        0 0 0 calc(var(--frame-inner-width, 20px) + 1px) var(--frame-inner-color, #d4af37),
+        0 0 0 var(--frame-outer-width, 25px) var(--frame-outer-color, #8b4513),
+        0 0 20px var(--frame-outer-width, 25px) rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 添加画布样式 */
+.canvas-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+</rewritten_file>
