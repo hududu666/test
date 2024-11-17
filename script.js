@@ -86,9 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function downloadImage() {
-        const link = document.createElement('a');
-        link.download = 'generated-image.png';
-        link.href = canvas.toDataURL();
-        link.click();
+        try {
+            const link = document.createElement('a');
+            link.download = 'generated-image.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        } catch (error) {
+            alert('下载失败，请重试');
+            console.error('下载错误:', error);
+        }
     }
 }); 

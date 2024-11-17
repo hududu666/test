@@ -3,12 +3,33 @@ canvas {
     border: 1px solid #ddd;
     border-radius: 4px;
     display: none;
+    touch-action: none;
 }
 
 .card {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
 }
 
 .btn {
     font-weight: 500;
+    padding: 12px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .col-md-6 {
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .form-label {
+        font-size: 16px;
+    }
 } 
