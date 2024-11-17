@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自动生成图片</title>
+    <title>不存在的画</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">自动生成图片</h1>
-        
+        <h1 class="text-center mb-1">不存在画廊</h1>
+        <h1 class="text-center mb-4">Non-existent Gallery</h1>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <div class="mb-3">
-                            <label class="form-label">图片尺寸</label>
-                            <select class="form-select" id="imageSize">
-                                <option value="small">小图 (300x300)</option>
-                                <option value="medium">中图 (500x500)</option>
-                                <option value="large">大图 (800x800)</option>
-                            </select>
+                        <div class="mb-4">
+                            <div class="random-toggle-container">
+                                <div class="random-toggle">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="randomAll" checked>
+                                        <label class="form-check-label" for="randomAll">
+                                            完全随机生成
+                                        </label>
+                                        <small class="text-muted d-block">取消勾选可以指定具体参数</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">图片风格</label>
-                            <select class="form-select" id="imageStyle">
-                                <option value="abstract">抽象</option>
-                                <option value="geometric">几何</option>
-                                <option value="pattern">图案</option>
-                            </select>
+
+                        <div id="specificOptions" style="display: none;">
+                            <div class="mb-3">
+                                <label class="form-label">图片尺寸</label>
+                                <select class="form-select" id="imageSize">
+                                    <option value="small">小图 (300x300)</option>
+                                    <option value="medium">中图 (500x500)</option>
+                                    <option value="large">大图 (800x800)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">图片风格</label>
+                                <select class="form-select" id="imageStyle">
+                                    <option value="abstract">抽象</option>
+                                    <option value="geometric">几何</option>
+                                    <option value="pattern">图案</option>
+                                    <option value="mandala">曼陀罗</option>
+                                    <option value="gradient">渐变</option>
+                                    <option value="mosaic">马赛克</option>
+                                    <option value="wave">波浪</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">颜色主题</label>
+                                <select class="form-select" id="colorTheme">
+                                    <option value="random">随机色彩</option>
+                                    <option value="pastel">柔和粉彩</option>
+                                    <option value="warm">暖色系</option>
+                                    <option value="cool">冷色系</option>
+                                    <option value="monochrome">单色调</option>
+                                    <option value="rainbow">彩虹色</option>
+                                    <option value="forest">森林色系</option>
+                                    <option value="ocean">海洋色系</option>
+                                </select>
+                            </div>
                         </div>
 
                         <button class="btn btn-primary w-100" id="generateBtn">生成图片</button>
@@ -39,6 +73,10 @@
 
                 <div class="mt-4 text-center">
                     <canvas id="imageCanvas" class="img-fluid"></canvas>
+                    <div id="artworkInfo" class="art-info mt-3" style="display: none;">
+                        <h3 class="artwork-title mb-3"></h3>
+                        <div class="artwork-details text-start"></div>
+                    </div>
                     <button class="btn btn-success mt-3" id="downloadBtn" style="display: none;">下载图片</button>
                 </div>
             </div>

@@ -32,4 +32,69 @@ canvas {
     .form-label {
         font-size: 16px;
     }
+}
+
+.art-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.artwork-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.artwork-details p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.artwork-details strong {
+    color: #555;
+    margin-right: 8px;
+}
+
+.random-toggle-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.random-toggle {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    width: fit-content;
+}
+
+.random-toggle .form-check {
+    margin: 0;
+    text-align: center;
+}
+
+.random-toggle .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    margin-right: 10px;
+}
+
+.random-toggle .form-check-label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2px;
+}
+
+.random-toggle small {
+    color: #6c757d;
+    font-size: 0.8em;
+    text-align: center;
 } 
