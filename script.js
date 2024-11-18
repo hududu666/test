@@ -133,7 +133,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     "上海当代艺术博物馆",
                     "东京都现代美术馆",
                     "古根海姆美术馆，纽约",
-                    "维多利亚国家美术馆，墨尔本"
+                    "维多利亚国家美术馆，墨尔本",
+                    "路德维希当代艺术博物馆，科隆",
+                    "新当代艺术中心，新加坡",
+                    "草间弥生美术馆，东京",
+                    "尤伦斯当代艺术中心，北京",
+                    "红砖美术馆，北京",
+                    "龙美术馆，上海",
+                    "金沢21世纪美术馆，日本",
+                    "森美术馆，东京",
+                    "白兔美术馆，悉尼",
+                    "现代艺术基金会，迈阿密",
+                    "当代艺术博物馆，洛杉矶",
+                    "新美术馆，纽约"
                 ],
                 classical: [
                     "卢浮宫，巴黎",
@@ -141,21 +153,45 @@ document.addEventListener('DOMContentLoaded', function() {
                     "国家美术馆，伦敦",
                     "梵蒂冈博物馆，罗马",
                     "故宫博物院，北京",
-                    "乌菲兹美术馆，佛罗伦萨"
+                    "乌菲兹美术馆，佛罗伦萨",
+                    "普拉多博物馆，马德里",
+                    "奥赛博物馆，巴黎",
+                    "冬宫博物馆，圣彼得堡",
+                    "阿姆斯特丹国立博物馆",
+                    "维也纳艺术史博物馆",
+                    "柏林国家美术馆",
+                    "芝加哥艺术博物馆",
+                    "波士顿美术馆",
+                    "台北故宫博物院",
+                    "东京国立博物馆",
+                    "国立中央博物馆，首尔",
+                    "布达佩斯美术馆",
+                    "新特列季亚科夫美术馆，莫斯科",
+                    "布雷拉美术馆，米兰"
                 ]
             },
             fictional: {
                 modern: [
                     "外卖骑手纪念馆，美团城",
-                    "熬夜选名人堂，失眠大陆",
-                    "社恐避难所艺术中心，独居星",
+                    "熬夜选手艺术中心，失眠大陆",
+                    "社恐避难所，独居星",
                     "快乐肥宅基地，沙发王国",
                     "外卖评论家展览馆，美食之都",
                     "脱发研究中心，秃头之巅",
                     "熊猫眼艺术馆，通宵城",
                     "整活艺术中心，沙雕之都",
                     "社畜解压中心，打工地狱",
-                    "摸鱼圣地，划水天堂"
+                    "摸鱼圣地，划水天堂",
+                    "代码崩溃纪念馆，bug之都",
+                    "咖啡因成瘾者美术馆，提神城",
+                    "深夜食堂艺术中心，夜宵王国",
+                    "键盘侠纪念馆，网络江湖",
+                    "996生存美术馆，加班之都",
+                    "算法工程师展览中心，人工智能城",
+                    "程序员泪水收藏馆，码农之都",
+                    "闪退艺术博物馆，崩溃之城",
+                    "内存溢出纪念馆，堆栈之都",
+                    "递归美术馆，死循环城"
                 ],
                 classical: [
                     "睡神祭坛，周公领地",
@@ -235,22 +271,24 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         // 添加创作背景模板
-        backgrounds: [
-            "作品创作于{year}年，是艺术家探索{movement}的重要时期",
-            "这件作品体现了{year}年代{movement}的典型特征",
-            "作品完成于{year}年，展现了艺术家对{movement}的深刻理解",
-            "这是艺术家{year}致于{movement}创作的代表作",
-            "作品反映了{year}年代{movement}的艺术思潮"
-        ],
+        backgrounds: {
+            realistic: [
+                "作品创作于{year}年，{location}。{inspiration}艺术家在{duration}的创作过程中，{creative_process}最终呈现出这件作品。{significance}",
+                "{year}年，{artist}在{event}期间受到启发，{creative_journey}。���品充分展现了{movement}的{characteristic}。{process_detail}",
+                "这件作品完成于{year}年的{season}，{background}。作品中可以明显感受到{influence}。{creation_detail}",
+                "创作于{year}年的这件作品，是艺术家在研究{movement}{duration}后的突破性尝试。{process}{completion}",
+                "作品诞生于{year}年的{time_period}，{location}。{inspiration}这是其探索{movement}的代表作，{significance}。"
+            ]
+        },
 
         // 添加生平描述模板
         biographies: {
             realistic: {
                 modern: [
-                    "{artist}，{nationality}当代艺术家。毕业于中央美术学院，后赴法国深造。其作品融合东西方美学思想，在{movement}领域开创性地运用新材料与技法。曾获得多项国际艺术大奖，作品被纽约现代艺术博物馆等机构永久收藏。",
-                    "{artist}出生于艺术世家，{nationality}著名艺术家。在巴黎美术学院学习期间接触{movement}，此后致力于将传统艺术语言与现代表现手法相结合。其作品体现了深厚的文化底蕴和前卫的艺术思维。",
-                    "作为{nationality}最具影响力的当代艺术家之一，{artist}的创作横跨装置、绘画、影像等多个领域。其对{movement}的探索获得了国际艺术界的广泛认可，作品多次参加威尼斯双年展。",
-                    "{artist}早年在东京艺术大学学习，后赴欧洲游历。作为{nationality}新锐艺术家，其作品体现了对{movement}独特的理解，将东方美学与现代艺术完美融合。"
+                    "{artist}，{nationality}当代艺术家。毕业于{education}，后赴{country}深造。{early_life}其作品融合{element1}与{element2}，在{movement}领域开创性地运用{technique}。{achievement}作品被{collection}等机构永久收藏。",
+                    "{artist}出生于艺术世家，{nationality}著名艺术家。{education_background}期间接触{movement}，{artistic_journey}。其作品体现了{characteristic1}和{characteristic2}。",
+                    "作为{nationality}最具影响力的当代艺术家之一，{artist}的创作横跨{medium1}、{medium2}等多个领域。{exploration}其对{movement}的探索获得了{recognition}，{achievement}。",
+                    "{artist}早年在{education}学习，后赴{country}游历。{influence}作为{nationality}新锐艺术家，其作品体现了对{movement}独特的理解，{artistic_style}。"
                 ],
                 classical: [
                     "{artist}是{movement}的开创者之一，其一生致力于艺术革新。早期在巴黎美术学院学习，后因战争辗转多地，这些经历深刻影响了其艺术风格。晚年定居南法，创作了大量代表作。",
@@ -263,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "{artist}生于{nationality}，从小就展现出惊人的摸鱼天赋。大学期间因为连续翘课一个月被发现时居然还在实验室里睡觉，这段经历启发了其后来在{movement}领域的创作。据说每件作品都是在午睡时完成的。",
                     "身为{nationality}新锐艺术家，{artist}因一次严重的咖啡因过量而获得灵感，开创了{movement}流派。其代表作《第38杯咖啡之后》被星巴克总部永久收藏。",
                     "{artist}曾是一名程序员，在第10086次修改bug后突然顿悟，放弃年薪50万的工作，转而投身{movement}艺术创作。其作品《永恒的404》被故障艺术博物馆收藏。",
-                    "作为{nationality}著名的外卖评论家，{artist}将日常点评外卖的经历转化为艺术创作开创了{movement}��流派。据说其灵感来源于一次外卖超时赔付的顿悟。",
+                    "作为{nationality}著名的外卖评论家，{artist}将日常点评外卖的经历转化为艺术创作开创了{movement}派。据说其灵感来源于一次外卖超时赔付的顿悟。",
                     "{artist}是{nationality}知名的熬夜艺术家，因常年作息颠倒，作品呈现出独特的朦胧美感。其代表作《凌晨四点的代码被评为年度最佳熊猫眼艺术作品。"
                 ],
                 classical: [
@@ -353,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "{artist}是{nationality}传奇人物，据说一生从未做过饭。",
                 "作为{movement}的创始人，{artist}发明了著名的'即时外卖美学'。",
                 "{artist}是历史上第一个因为熬夜过度而顿悟的艺术。",
-                "{artist}是{nationality}传奇人物，据说其一生修复了999,999个bug。",
+                "{artist}是{nationality}传奇人物，据其一生修复了999,999个bug。",
                 "作为{movement}的创始人，{artist}发明了著名的'蓝屏美学'。",
                 "没人知道{artist}的真实身份，有人说TA是一个AI程序的bug产物。"
             ]
@@ -485,166 +523,357 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // 生成随机艺术品信息
+    // 添加辅助函数用于生成更丰富的内容
+    function generateBiographyDetails() {
+        return {
+            education: randomChoice([
+                "中央美术学院", "巴黎高等美术学院", "东京艺术大学", 
+                "纽约视觉艺术学院", "伦敦艺术大学", "柏林艺术学院"
+            ]),
+            country: randomChoice([
+                "法国", "德国", "意大利", "美国", "英国", "日本"
+            ]),
+            early_life: randomChoice([
+                "自幼展现出非凡的艺术天赋，", 
+                "在艺术世家的熏陶下成长，",
+                "经历了丰富的文化体验，"
+            ]),
+            // ... 其他详细内容
+        };
+    }
+
+    // 修改展览标题生成系统
+    const exhibitionTitles = {
+        realistic: {
+            prefix: [
+                "永恒的", "光影中的", "时代的", "沉思中的", "记忆里的",
+                "穿越时空的", "静谧的", "深邃的", "诗意的", "无界的"
+            ],
+            main: [
+                "对话", "探索", "思考", "回响", "凝视",
+                "瞬间", "印象", "追寻", "境界", "诗篇"
+            ],
+            suffix: [
+                "个展", "艺术展", "作品展", "回顾展", "主题展",
+                "特展", "联展", "巡展", "艺术节", "双年展"
+            ]
+        },
+        fictional: {
+            prefix: [
+                "赛博空间的", "量子纠缠的", "数字荒原的", "像素之海的", "代码迷宫的",
+                "bug纪元的", "云端漂流的", "数据风暴的", "虚拟现实的", "平行宇宙的"
+            ],
+            main: [
+                "崩溃", "重启", "编译", "递归", "循环",
+                "溢出", "渲染", "解构", "混沌", "穿越"
+            ],
+            suffix: [
+                "实验展", "数字展", "虚拟展", "跨次元展", "元宇宙展",
+                "沉浸展", "交互展", "体验展", "网络展", "科技艺术节"
+            ]
+        }
+    };
+
+    // 修改生成展览历史的函数，使其与艺术家生平相关联
+    function generateExhibitions(artist, artworkYear, movement, fictionMode, isModern) {
+        const exhibitionCount = randomInt(3, 6);
+        const exhibitions = [];
+        let currentYear = artworkYear;
+        let artistReputation = 1.0; // 艺术家声誉基础值
+        
+        for (let i = 0; i < exhibitionCount; i++) {
+            const exhibitionYear = currentYear + randomInt(1, 3);
+            currentYear = exhibitionYear;
+            
+            const titles = exhibitionTitles[fictionMode ? 'fictional' : 'realistic'];
+            const prefix = randomChoice(titles.prefix);
+            const main = randomChoice(titles.main);
+            const suffix = randomChoice(titles.suffix);
+            
+            // 根据展览场地的重要性增加声誉
+            const venueImportance = Math.random();
+            let venue;
+            if (venueImportance > 0.7) { // 重要展馆
+                venue = randomChoice(artistDatabase.exhibitions[fictionMode ? 'fictional' : 'realistic'][isModern ? 'modern' : 'classical'].slice(0, 5));
+                artistReputation *= 1.5;
+            } else { // 普通展馆
+                venue = randomChoice(artistDatabase.exhibitions[fictionMode ? 'fictional' : 'realistic'][isModern ? 'modern' : 'classical'].slice(5));
+                artistReputation *= 1.2;
+            }
+            
+            exhibitions.push({
+                year: exhibitionYear,
+                title: `${prefix}${main}${suffix}`,
+                venue: venue,
+                reputation: artistReputation
+            });
+        }
+        
+        return exhibitions;
+    }
+
+    // 扩充艺术家生平模板
+    const biographyTemplates = {
+        realistic: {
+            modern: [
+                "{artist}（{birth_year}-），{nationality}当代艺术家。{education_background}。早年受{early_influence}影响，{early_career}。{mid_career}期间开创性地将{technique}与{art_element}相结合，{achievement}。其作品多次在{major_exhibitions}展出，{recognition}。近年致力于{recent_focus}的探索，{current_status}。",
+                
+                "{artist}生于{birth_year}年，{birth_place}。{family_background}。{education}期间师从{mentor}，{learning_experience}。{artistic_journey}后，形成了独特的{style_characteristics}风格。{major_works}奠定了其在{art_movement}中的重要地位。{international_influence}，{current_projects}。",
+                
+                "作为{nationality}最具影响力的当代艺术家之一，{artist}的艺术生涯始于{early_year}年。{early_education}后，{overseas_experience}。在{critical_period}期间，{artistic_breakthrough}。其代表作品{masterpiece}展现了{artistic_vision}。{awards_and_honors}，目前{current_focus}。",
+                
+                "{artist}出生于{birth_year}年的{birth_place}，{childhood_background}。{education_path}期间，{formative_experience}。{career_development}后，创立了{unique_technique}。其作品{work_characteristics}，{artistic_contribution}。{recent_achievements}，{future_direction}。"
+            ],
+            classical: [
+                // ... 类似地扩充古典艺术家的生平模板
+            ]
+        },
+        fictional: {
+            modern: [
+                // ... 扩充虚构艺术家的生平模板
+            ]
+        }
+    };
+
+    // 扩充创作背景模板
+    const backgroundTemplates = {
+        realistic: [
+            "作品创作于{year}年{season}，{artist}在{location}驻留期间的重要创作。这一时期艺术家正经历{personal_experience}，{emotional_state}。作品中运用了{technique}，呈现出{visual_effect}的效果。创作过程历时{duration}，期间{creative_process}。这件作品标志着艺术家在{artistic_exploration}上的重要突破，{significance}。",
+            
+            "{year}年，{artist}在经历了{life_event}后，开始构思这件作品。创作灵感来源于{inspiration_source}，{conceptual_development}。艺术家通过{creative_method}，将{element1}与{element2}融合，展现了对{theme}的深刻思考。作品完成后首次在{exhibition_venue}展出，{public_response}。",
+            
+            "这件作品完成于{year}年的{time_period}，正值{artist}探索{artistic_direction}的关键时期。作品中可见艺术家对{artistic_influence}的致敬，同时{innovation_aspect}。创作过程中，{technical_challenge}，最终{achievement}。这件作品{historical_significance}，{contemporary_value}。",
+            
+            "{year}年{season}，{artist}在{studio_location}的工作室创作了这件作品。当时艺术家正在研究{research_topic}，{research_influence}。作品采用了{special_technique}，{technical_details}。整个创作持续了{time_span}，期间{creative_journey}。这件作品代表了{artistic_milestone}，{legacy}。"
+        ]
+    };
+
+    // 修改拍卖记录生成函数，移除市场周期
+    function generateAuctions(artworkYear, exhibitions, fictionMode) {
+        const auctionCount = randomInt(2, 4);
+        const auctions = [];
+        let currentYear = artworkYear + 5;
+        let basePrice = randomInt(100000, 1000000); // 基础价格
+        
+        for (let i = 0; i < auctionCount; i++) {
+            const auctionYear = currentYear + randomInt(2, 5);
+            currentYear = auctionYear;
+            
+            // 价格增长基于展览历史和时间
+            const exhibitionBonus = exhibitions.length * 0.2; // 展览次数影响
+            const timeAppreciation = (auctionYear - artworkYear) * 0.05; // 时间增值
+            const price = Math.floor(basePrice * (1 + exhibitionBonus + timeAppreciation));
+            
+            basePrice = price; // 更新基础价格
+            
+            const auctionHouse = randomChoice(
+                artistDatabase.auctionHouses[fictionMode ? 'fictional' : 'realistic']
+            );
+            
+            auctions.push(`${auctionYear}年，${auctionHouse}春季拍卖会，成交价：${price.toLocaleString('zh-CN')}元`);
+        }
+        
+        return auctions;
+    }
+
+    // 生成艺术品信息
     function generateArtworkInfo(style) {
         const fictionMode = document.getElementById('fictionMode').checked;
         const isModern = Math.random() > 0.3;
         
-        // 根据虚构模式选择不同的数据源
-        const dataSource = fictionMode ? 'fictional' : 'realistic';
-        const artist = randomChoice(artistDatabase.names[dataSource][isModern ? 'modern' : 'classical']);
-        const year = randomInt(artistDatabase.years.min, artistDatabase.years.max);
+        // 生成基础信息
+        const artist = randomChoice(artistDatabase.names[fictionMode ? 'fictional' : 'realistic'][isModern ? 'modern' : 'classical']);
+        const birthYear = isModern ? randomInt(1950, 1990) : randomInt(1840, 1920);
+        const artworkYear = isModern ? randomInt(2000, 2024) : randomInt(birthYear + 25, birthYear + 60);
+        const movement = randomChoice(artistDatabase.styleMovements[style] || artistDatabase.styleMovements.abstract);
         
-        // 根据虚构模式选择不同的艺术流派
-        const movement = fictionMode ? 
-            randomChoice(artistDatabase.fictionalMovements[style] || artistDatabase.fictionalMovements.abstract) :
-            randomChoice(artistDatabase.styleMovements[style] || artistDatabase.styleMovements.abstract);
-
-        // 生成拍卖记录和估价（相关联）
-        const basePrice = randomInt(1, 3000) * 10000;
-        const estimatedPrice = `${(basePrice/10000).toFixed(0)}万 - ${(basePrice/10000 * 1.5).toFixed(0)}万`;
+        // 生成生平描述
+        const details = generateBiographyDetails();
+        const biography = generateBiography(artist, birthYear, movement, details, fictionMode);
         
-        // 生成拍卖记录
-        let auctions = [];
-        const auctionCount = randomInt(1, 2);
-        for(let i = 0; i < auctionCount; i++) {
-            const auctionYear = randomInt(year + 5, 2024);
-            const auctionPrice = basePrice * (0.8 + Math.random() * 0.8); // 80%-160%估价
-            auctions.push(`${auctionYear}年 ${randomChoice(artistDatabase.auctionHouses[dataSource])} ${(auctionPrice/10000).toFixed(0)}万元`);
-        }
-
-        // 生成标题
-        const title = fictionMode ? generateFictionalTitle() : generateRealisticTitle();
-
+        // 基于生平生成创作背景
+        const background = generateBackground(artist, artworkYear, movement, details, fictionMode);
+        
         // 生成展览历史
-        let exhibitions = [];
-        const exhibitionCount = randomInt(2, 4);
-        const exhibitionList = artistDatabase.exhibitions[dataSource][isModern ? 'modern' : 'classical'];
+        const exhibitions = generateExhibitions(artist, artworkYear, movement, fictionMode, isModern);
         
-        if (fictionMode) {
-            for(let i = 0; i < exhibitionCount; i++) {
-                const exhibitionYear = randomInt(year, 2024);
-                const venue = randomChoice(exhibitionList);
-                const theme = randomChoice(artistDatabase.fictionalExhibitionThemes);
-                const format = randomChoice(artistDatabase.fictionalExhibitionFormats)
-                    .replace('{venue}', venue)
-                    .replace('{theme}', theme);
-                exhibitions.push(`${exhibitionYear}: ${format}`);
-            }
-        } else {
-            for(let i = 0; i < exhibitionCount; i++) {
-                const exhibitionYear = randomInt(year, 2024);
-                exhibitions.push(`${exhibitionYear}: ${randomChoice(exhibitionList)}`);
-            }
-        }
+        // 基于展览历史生成收藏记录
+        const collections = generateCollections(exhibitions, fictionMode);
+        
+        // 基于收藏记录生成拍卖记录
+        const auctions = generateAuctions(artworkYear, exhibitions, fictionMode);
 
-        // 生成收藏记录
-        let collections = [];
-        const collectionCount = randomInt(1, 3);
-        for(let i = 0; i < collectionCount; i++) {
-            collections.push(randomChoice(artistDatabase.collections[dataSource]));
-        }
-
-        // 生成背景描述
-        const background = fictionMode ?
-            randomChoice(artistDatabase.fictionalBackgrounds)
-                .replace('{year}', year)
-                .replace('{movement}', movement) :
-            randomChoice(artistDatabase.backgrounds)
-                .replace('{year}', year)
-                .replace('{movement}', movement);
-
-        // 生成更详细的生平描述
-        const biography = fictionMode ?
-            `${randomChoice(artistDatabase.biographies.fictional[isModern ? 'modern' : 'classical'])
-                .replace('{artist}', artist.zh)
-                .replace('{nationality}', artist.nationality)
-                .replace('{movement}', movement)}
-            ${randomChoice(artistDatabase.education.fictional[isModern ? 'modern' : 'classical'])}。
-            ${randomChoice(artistDatabase.fictionalBiographies[isModern ? 'modern' : 'classical'])
-                .replace('{artist}', artist.zh)
-                .replace('{nationality}', artist.nationality)
-                .replace('{movement}', movement)}` :
-            `${randomChoice(artistDatabase.biographies.realistic[isModern ? 'modern' : 'classical'])
-                .replace('{artist}', artist.zh)
-                .replace('{nationality}', artist.nationality)
-                .replace('{movement}', movement)}
-            ${randomChoice(artistDatabase.education.realistic[isModern ? 'modern' : 'classical'])}。`;
-
-        // 生成作品描述
-        const descriptions = fictionMode ? [
-            `作品体现了${artist.zh}对${movement}的深入思考`,
-            `通过${movement}探索${movement}的新可能`,
-            `融合${movement}与传统艺术语言的实验性作品`,
-            `反映了艺术家对${movement}的独特见解`,
-            `${movement}与${movement}的完美结合`
-        ] : [
-            `这件作现了${artist.zh}对${movement}的独特诠释`,
-            `作品体现了${movement}的核心特征`,
-            `艺术家通过${movement}探索形式与内容的关系`,
-            `作品反映了${movement}时期的艺术特点`,
-            `这是${movement}风格的典型代表作`
-        ];
-        const description = randomChoice(descriptions);
-
-        // 获取对应的创作技法
-        const technique = fictionMode ? 
-            techniques.fictional[style] || techniques.fictional.abstract :
-            techniques.realistic[style] || techniques.realistic.abstract;
+        // 生成作品标题和描述
+        const title = generateTitle(style, movement, fictionMode);
+        const description = generateDescription(artist, movement, background, fictionMode);
+        const technique = generateTechnique(style, movement, fictionMode);
+        const estimatedPrice = calculateEstimatedPrice(artworkYear, exhibitions.length, collections.length, auctions.length);
 
         return {
             title,
             artist,
-            year,
+            year: artworkYear,
             movement,
             style,
             description,
             estimatedPrice,
+            biography,
+            background,
+            technique,
             exhibitions,
             collections,
-            auctions,
-            background,
-            biography,
-            technique
+            auctions
         };
     }
 
-    // 添加虚构标题生成函数
-    function generateFictionalTitle() {
-        const prefixes = [
-            "今天不想上班的", "产品经理的需求", "会议进行中的",
-            "摸鱼日记之", "划水技巧之", "假装很忙的",
-            "看起来很害的", "其实什么都没画的", "老板快看的",
-            "这个真的不是Bug的", "这个需求很简单的", "下班前完成的"
-        ];
-        
-        const suffixes = [
-            "量子态", "平行宇宙", "多维投影",
-            "但是没有灵感", "然后就下班了", "但是没有人懂",
-            "之我也不知道", "之产品经理说的", "之这样就对了",
-            "之看起来很厉害", "其实很简单", "之我也很疑"
-        ];
+    // 生成艺术家生平
+    function generateBiography(artist, birthYear, movement, details, fictionMode) {
+        if (fictionMode) {
+            const education = randomChoice([
+                "在996编程学院",
+                "在赛博朋克大学",
+                "在元宇宙艺术学院",
+                "在人工智能研究所"
+            ]);
+            
+            const lifeEvent = randomChoice([
+                "在一次系统崩溃后顿悟",
+                "被bug困扰后的顿悟",
+                "在连续通宵后的灵感迸发",
+                "在第108杯咖啡因的启发下"
+            ]);
 
-        return `${randomChoice(prefixes)}${randomChoice(suffixes)} #${randomInt(1, 999)}`;
+            return `${artist.zh}，${artist.nationality}著名数字艺术家，生于${birthYear}年。${education}学习期间，${lifeEvent}，开始探索${movement}艺术创作。其作品以独特的科技感和现代审美著称，被誉为"赛博艺术新浪潮"的代表人物。`;
+        } else {
+            const education = randomChoice([
+                "巴黎美术学院",
+                "纽约艺术学院",
+                "东京艺术大学",
+                "中央美术学院"
+            ]);
+            
+            const influence = randomChoice([
+                "受到印象派大师的影响",
+                "深受表现主义的启发",
+                "在抽象艺术探索中找到方向",
+                "在东西方艺术的碰撞中形成个人风格"
+            ]);
+
+            return `${artist.zh}，${artist.nationality}著名艺术家，生于${birthYear}年。在${education}求学期间，${influence}，开始专注于${movement}的艺术探索。其作品以独特的视角和深刻的人文关怀著称，对现代艺术发展产生深远影响。`;
+        }
     }
 
-    // 添加现实标题生成函数
-    function generateRealisticTitle() {
-        const prefixes = [
-            "构成", "空间", "形态",
-            "光影", "韵律", "节奏",
-            "色彩研究", "抽象", "几何",
-            "意象", "变奏", "序列",
-            "静物", "风景", "印象"
-        ];
-        
-        const suffixes = [
-            "之一", "系列", "变奏",
-            "No.", "组曲", "印象",
-            "研究", "探索", "实验"
-        ];
+    // 生成创作背景
+    function generateBackground(artist, year, movement, details, fictionMode) {
+        if (fictionMode) {
+            const inspiration = randomChoice([
+                `在连续调试代码${randomInt(12, 48)}小时后`,
+                `在第${randomInt(50, 200)}次系统崩溃后`,
+                `在删除了${randomInt(10000, 100000)}行代码后`,
+                `在修复了${randomInt(99, 999)}个bug后`
+            ]);
 
-        return `${randomChoice(prefixes)} ${randomChoice(suffixes)}${randomInt(1, 99)}`;
+            const creative_process = randomChoice([
+                "通过人工智能算法的反复迭代",
+                "在虚拟现实空间中的即兴创作",
+                "使用量子计算机的随机计算",
+                "借助区块链技术的去中心化创作"
+            ]);
+
+            return `这件作品创作于${year}年，${inspiration}，${artist.zh}通过${creative_process}完成了这件作品。作品充分展现了艺术家对${movement}的独特理解，被认为是数字艺术史上的重要里程碑。`;
+        } else {
+            const inspiration = randomChoice([
+                "在一次旅行中的偶然灵感",
+                "对社会现象的深入思考",
+                "对传统艺术的重新诠释",
+                "在生活观察中的突然顿悟"
+            ]);
+
+            const creative_process = randomChoice([
+                "经过长期的艺术探索",
+                "通过反复的技法实验",
+                "在多次构图修改后",
+                "经过深入的主题研究"
+            ]);
+
+            return `这件作品创作于${year}年，源于${inspiration}。${artist.zh}${creative_process}，最终完成了这件体现${movement}精神的代表作。作品不仅展现了艺术家对形式的追求，更蕴含着深刻的时代思考。`;
+        }
+    }
+
+    // 生成收藏记录
+    function generateCollections(exhibitions, fictionMode) {
+        const collectionCount = randomInt(2, 4);
+        const collections = [];
+        
+        for (let i = 0; i < collectionCount; i++) {
+            collections.push(
+                randomChoice(artistDatabase.collections[fictionMode ? 'fictional' : 'realistic'])
+            );
+        }
+        
+        return collections;
+    }
+
+    // 生成作品标题和描述
+    function generateTitle(style, movement, fictionMode) {
+        if (fictionMode) {
+            const prefixes = [
+                "今天不想上班的", "产品经理的需求", "会议进行中的",
+                "摸鱼日记之", "划水技巧之", "假装很忙的",
+                "看起来很害的", "其实什么都没画的", "老板快看的",
+                "这个真的不是Bug的", "这个需求很简单的", "下班前完成的"
+            ];
+            
+            const suffixes = [
+                "量子态", "平行宇宙", "多维投影",
+                "但是没有灵感", "然后就下班了", "但是没有人懂",
+                "之我也不知道", "之产品经理说的", "之这样就对了",
+                "之看起来很厉害", "其实很简单", "之我也很疑"
+            ];
+
+            return `${randomChoice(prefixes)}${randomChoice(suffixes)} #${randomInt(1, 999)}`;
+        } else {
+            const prefixes = [
+                "构成", "空间", "形态",
+                "光影", "韵律", "节奏",
+                "色彩研究", "抽象", "几何",
+                "意象", "变奏", "序列",
+                "静物", "风景", "印象"
+            ];
+            
+            const suffixes = [
+                "之一", "系列", "变奏",
+                "No.", "组曲", "印象",
+                "研究", "探索", "实验"
+            ];
+
+            return `${randomChoice(prefixes)} ${randomChoice(suffixes)}${randomInt(1, 99)}`;
+        }
+    }
+
+    // 生成作品描述
+    function generateDescription(artist, movement, background, fictionMode) {
+        if (fictionMode) {
+            return `作品体现了${artist.zh}对${movement}的深入思考`;
+        } else {
+            return `这件作现了${artist.zh}对${movement}的独特诠释`;
+        }
+    }
+
+    // 获取对应的创作技法
+    function generateTechnique(style, movement, fictionMode) {
+        if (fictionMode) {
+            return techniques.fictional[style] || techniques.fictional.abstract;
+        } else {
+            return techniques.realistic[style] || techniques.realistic.abstract;
+        }
+    }
+
+    // 计算估价
+    function calculateEstimatedPrice(artworkYear, exhibitionCount, collectionCount, auctionCount) {
+        const basePrice = randomInt(1, 3000) * 10000;
+        const estimatedPrice = `${(basePrice/10000).toFixed(0)}万 - ${(basePrice/10000 * 1.5).toFixed(0)}万`;
+        return estimatedPrice;
     }
 
     // 修改生成图片的函数
@@ -828,7 +1057,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="artwork-section">
                 <h4>展览历史</h4>
                 <ul>
-                    ${artworkInfo.exhibitions.map(e => `<li>${e}</li>`).join('')}
+                    ${artworkInfo.exhibitions.map(e => `<li>${e.year}年，"${e.title}"，${e.venue}</li>`).join('')}
                 </ul>
             </div>
 
