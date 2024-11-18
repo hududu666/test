@@ -55,7 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     { zh: "岳敏君", en: "Yue Minjun", nationality: "中国" },
                     { zh: "蔡国强", en: "Cai Guoqiang", nationality: "中国" },
                     { zh: "奈良美智", en: "Yoshitomo Nara", nationality: "日本" },
-                    { zh: "杜松儿", en: "Du Songer", nationality: "中国" }
+                    { zh: "杜松儿", en: "Du Songer", nationality: "中国" },
+                    { zh: "李小龙", en: "Bruce Lee", nationality: "中国" }, // 新增
+                    { zh: "林风眠", en: "Lin Fengmian", nationality: "中国" }, // 新增
+                    { zh: "吴冠中", en: "Wu Guanzhong", nationality: "中国" }, // 新增
+                    { zh: "张大千", en: "Zhang Daqian", nationality: "中国" }, // 新增
+                    { zh: "黄永玉", en: "Huang Yongyu", nationality: "中国" }  // 新增
                 ],
                 classical: [
                     { zh: "莫奈", en: "Claude Monet", nationality: "法国" },
@@ -66,7 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     { zh: "蒙德里安", en: "Piet Mondrian", nationality: "荷兰" },
                     { zh: "马蒂斯", en: "Henri Matisse", nationality: "法国" },
                     { zh: "克利", en: "Paul Klee", nationality: "德国" },
-                    { zh: "米罗", en: "Joan Miró", nationality: "班牙" }
+                    { zh: "米罗", en: "Joan Miró", nationality: "班牙" },
+                    { zh: "提香", en: "Titian", nationality: "意大利" }, // 新增
+                    { zh: "拉斐尔", en: "Raphael", nationality: "意大利" }, // 新增
+                    { zh: "丢勒", en: "Albrecht Dürer", nationality: "德国" }, // 新增
+                    { zh: "希克斯", en: "John Hicks", nationality: "英国" }, // 新增
+                    { zh: "德加", en: "Edgar Degas", nationality: "法国" }  // 新增
                 ]
             },
             fictional: {  // 虚构风格的艺术
@@ -96,7 +106,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     { zh: "熊猫眼专家", en: "Panda Eyes Pro", nationality: "黑眼圈联邦" },
                     { zh: "废话大师", en: "Master of Nonsense", nationality: "唠叨之国" },
                     { zh: "整活王者", en: "Meme Lord", nationality: "沙雕联邦" },
-                    { zh: "柴米油盐", en: "Daily Necessity", nationality: "烟火人间" }
+                    { zh: "柴米油盐", en: "Daily Necessity", nationality: "烟火人间" },
+                    { zh: "代码狂人", en: "Code Maniac", nationality: "编程王国" }, // 新增
+                    { zh: "调试天才", en: "Debug Genius", nationality: "调试帝国" }, // 新增
+                    { zh: "算法大师", en: "Algorithm Master", nationality: "数据王国" }, // 新增
+                    { zh: "虚拟现实艺术家", en: "VR Artist", nationality: "虚拟世界" }, // 新增
+                    { zh: "数据科学家", en: "Data Scientist", nationality: "科技帝国" }  // 新增
                 ],
                 classical: [
                     { zh: "bug之父", en: "Father of Bugs", nationality: "混沌帝国" },
@@ -105,18 +120,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     { zh: "睡神", en: "Sleep God", nationality: "周公领地" },
                     { zh: "厨房杀手", en: "Kitchen Destroyer", nationality: "外卖帝国" },
                     { zh: "拖延大帝", en: "Procrastination Emperor", nationality: "明日王国" },
-                    { zh: "快乐单身狗", en: "Happy Single Dog", nationality: "一人食帝国" }
+                    { zh: "快乐单身狗", en: "Happy Single Dog", nationality: "一人食帝国" },
+                    { zh: "代码艺术家", en: "Code Artist", nationality: "编程王国" }, // 新增
+                    { zh: "调试大师", en: "Debug Master", nationality: "调试帝国" }, // 新增
+                    { zh: "虚拟艺术家", en: "Virtual Artist", nationality: "虚拟世界" }  // 新增
                 ]
             }
         },
         styleMovements: {
-            abstract: ["抽象表现主义", "行动绘画", "色绘画", "几何抽象"],
-            geometric: ["构成主义", "至上主义", "简约主义", "欧普艺术"],
-            pattern: ["图案艺术", "装饰艺术", "新艺术运动", "重复艺术"],
-            mandala: ["神秘主义艺术", "精神性艺术", "冥想艺术", "宗教艺术"],
-            gradient: ["色彩场绘画", "光艺术", "渐变艺术", "氛围艺术"],
-            mosaic: ["像素艺术", "数字马赛克", "点彩", "像素义"],
-            wave: ["动态艺术", "韵律艺术", "声波艺术", "动能艺术"]
+            abstract: ["抽象表现主义", "行动绘画", "色绘画", "几何抽象", "超现实主义", "未来主义"], // 新增
+            geometric: ["构成主义", "至上主义", "简约主义", "欧普艺术", "立体主义", "装置艺术"], // 新增
+            pattern: ["图案艺术", "装饰艺术", "新艺术运动", "重复艺术", "波普艺术", "后现代艺术"], // 新增
+            mandala: ["神秘主义艺术", "精神性艺术", "冥想艺术", "宗教艺术", "心理艺术", "象征主义"], // 新增
+            gradient: ["色彩场绘画", "光艺术", "渐变艺术", "氛围艺术", "色彩心理学", "光影艺术"], // 新增
+            mosaic: ["像素艺术", "数字马赛克", "点彩", "像素义", "拼贴艺术", "混合媒介"], // 新增
+            wave: ["动态艺术", "韵律艺术", "声波艺术", "动能艺术", "流动艺术", "节奏艺术"] // 新增
         },
         years: {
             min: 1850,
@@ -145,7 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "白兔美术馆，悉尼",
                     "现代艺术基金会，迈阿密",
                     "当代艺术博物馆，洛杉矶",
-                    "新美术馆，纽约"
+                    "新美术馆，纽约",
+                    "阿姆斯特丹现代艺术博物馆，阿姆斯特丹" // 新增
                 ],
                 classical: [
                     "卢浮宫，巴黎",
@@ -167,7 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "国立中央博物馆，首尔",
                     "布达佩斯美术馆",
                     "新特列季亚科夫美术馆，莫斯科",
-                    "布雷拉美术馆，米兰"
+                    "布雷拉美术馆，米兰",
+                    "国家美术馆，华盛顿" // 新增
                 ]
             },
             fictional: {
@@ -191,13 +211,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     "程序员泪水收藏馆，码农之都",
                     "闪退艺术博物馆，崩溃之城",
                     "内存溢出纪念馆，堆栈之都",
-                    "递归美术馆，死循环城"
+                    "递归美术馆，死循环城",
+                    "虚拟现实艺术展，数字空间" // 新增
                 ],
                 classical: [
                     "睡神祭坛，周公领地",
                     "拖延博物馆，明日帝国",
                     "单身狗纪念馆，一人食之都",
-                    "厨房废墟展览馆，外卖王国"
+                    "厨房废墟展览馆，外卖王国",
+                    "外卖艺术博物馆，外卖王国" // 新增
                 ]
             }
         },
@@ -212,7 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "中国美术馆",
                 "东京国立近代美术馆",
                 "维多利亚和阿尔伯特博物馆",
-                "芝加哥艺术博物馆"
+                "芝加哥艺术博物馆",
+                "国家美术馆，华盛顿" // 新增
             ],
             fictional: [
                 "量子位面艺术基金会",
@@ -234,7 +257,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "熊猫眼保护协会",
                 "整活艺术保护中心",
                 "社畜文化保护组织",
-                "摸鱼技术研究所"
+                "摸鱼技术研究所",
+                "虚拟艺术收藏协会" // 新增
             ]
         },
 
@@ -247,7 +271,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 "中国嘉德",
                 "北京保利",
                 "荣宝斋",
-                "上海朵云轩"
+                "上海朵云轩",
+                "香港佳士得",
+                "香港苏富比",
+                "北京匡时",
+                "北京保利国际",
+                "上海国际拍卖",
+                "中国嘉德香港",
+                "北京华辰",
+                "上海朵云轩国际",
+                "北京中拍",
+                "香港艺术品拍卖行",
+                "纽约拍卖行" // 新增
             ],
             fictional: [
                 "量子拍卖行",
@@ -266,7 +301,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 "脱发预防产品拍卖行",
                 "熊猫眼修复技术交易所",
                 "整活梗图交易中心",
-                "社畜解压用品拍卖行"
+                "社畜解压用品拍卖行",
+                "虚拟艺术拍卖行" // 新增
             ]
         },
 
@@ -274,10 +310,11 @@ document.addEventListener('DOMContentLoaded', function() {
         backgrounds: {
             realistic: [
                 "作品创作于{year}年，{location}。{inspiration}艺术家在{duration}的创作过程中，{creative_process}最终呈现出这件作品。{significance}",
-                "{year}年，{artist}在{event}期间受到启发，{creative_journey}。���品充分展现了{movement}的{characteristic}。{process_detail}",
+                "{year}年，{artist}在{event}期间受到启发，{creative_journey}。品充分展现了{movement}的{characteristic}。{process_detail}",
                 "这件作品完成于{year}年的{season}，{background}。作品中可以明显感受到{influence}。{creation_detail}",
                 "创作于{year}年的这件作品，是艺术家在研究{movement}{duration}后的突破性尝试。{process}{completion}",
-                "作品诞生于{year}年的{time_period}，{location}。{inspiration}这是其探索{movement}的代表作，{significance}。"
+                "作品诞生于{year}年的{time_period}，{location}。{inspiration}这是其探索{movement}的代表作，{significance}。",
+                "在{year}年，{artist}在{location}的创作过程中，受到了{influence}的深刻影响，最终形成了这件作品。" // 新增
             ]
         },
 
@@ -288,12 +325,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     "{artist}，{nationality}当代艺术家。毕业于{education}，后赴{country}深造。{early_life}其作品融合{element1}与{element2}，在{movement}领域开创性地运用{technique}。{achievement}作品被{collection}等机构永久收藏。",
                     "{artist}出生于艺术世家，{nationality}著名艺术家。{education_background}期间接触{movement}，{artistic_journey}。其作品体现了{characteristic1}和{characteristic2}。",
                     "作为{nationality}最具影响力的当代艺术家之一，{artist}的创作横跨{medium1}、{medium2}等多个领域。{exploration}其对{movement}的探索获得了{recognition}，{achievement}。",
-                    "{artist}早年在{education}学习，后赴{country}游历。{influence}作为{nationality}新锐艺术家，其作品体现了对{movement}独特的理解，{artistic_style}。"
+                    "{artist}早年在{education}学习，后赴{country}游历。{influence}作为{nationality}新锐艺术家，其作品体现了对{movement}独特的理解，{artistic_style}。",
+                    "{artist}在{year}年获得了{award}，成为了{movement}领域的标志性人物。" // 新增
                 ],
                 classical: [
                     "{artist}是{movement}的开创者之一，其一生致力于艺术革新。早期在巴黎美术学院学习，后因战争辗转多地，这些经历深刻影响了其艺术风格。晚年定居南法，创作了大量代表作。",
                     "作为{nationality}艺术史上最具影响力的大师，{artist}的创作对{movement}的发展产生了深远影响。其独特的色彩运用和构图方式开创了现代艺术的新纪元。",
-                    "{artist}出生于{nationality}艺术世家，青年时期就展现出非凡的艺术天赋。在各大美术学院学习期间，开始探索{movement}的可能性。其作品被卢浮宫等世界顶级美术馆收藏。"
+                    "{artist}出生于{nationality}艺术世家，青年时期就展现出非凡的艺术天赋。在各大美术学院学习期间，开始探索{movement}的可能性。其作品被卢浮宫等世界顶级美术馆收藏。",
+                    "{artist}在{year}年获得了{award}，成为了{movement}领域的标志性人物。" // 新增
                 ]
             },
             fictional: {
@@ -302,12 +341,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     "身为{nationality}新锐艺术家，{artist}因一次严重的咖啡因过量而获得灵感，开创了{movement}流派。其代表作《第38杯咖啡之后》被星巴克总部永久收藏。",
                     "{artist}曾是一名程序员，在第10086次修改bug后突然顿悟，放弃年薪50万的工作，转而投身{movement}艺术创作。其作品《永恒的404》被故障艺术博物馆收藏。",
                     "作为{nationality}著名的外卖评论家，{artist}将日常点评外卖的经历转化为艺术创作开创了{movement}派。据说其灵感来源于一次外卖超时赔付的顿悟。",
-                    "{artist}是{nationality}知名的熬夜艺术家，因常年作息颠倒，作品呈现出独特的朦胧美感。其代表作《凌晨四点的代码被评为年度最佳熊猫眼艺术作品。"
+                    "{artist}是{nationality}知名的熬夜艺术家，因常年作息颠倒，作品呈现出独特的朦胧美感。其代表作《凌晨四点的代码被评为年度最佳熊猫眼艺术作品。",
+                    "{artist}在{year}年获得了{award}，成为了{movement}领域的标志性人物。" // 新增
                 ],
                 classical: [
                     "{artist}是{nationality}传奇人物，据说一生都在寻找完美的外卖优惠券。在这个过程中，外开创了{movement}艺术流派。其作品《消失的满减券》被美团博物馆永久收藏。",
                     "作为{movement}的创始人，{artist}最初是因为修电脑时不小心把系统搞崩溃，在蓝屏中看到了艺术的真谛。此后，其作品《蓝屏的诗意》轰动整个艺术界。",
-                    "{artist}原是{nationality}知名的社恐患者，因为不敢出门参加画展，开创了云端展览模式。其代表作《我真的不想出门》启发了一代宅家艺术家。"
+                    "{artist}原是{nationality}知名的社恐患者，因为不敢出门参加画展，开创了云端展览模式。其代表作《我真的不想出门》启发了一代宅家艺术家。",
+                    "{artist}在{year}年获得了{award}，成为了{movement}领域的标志性人物。" // 新增
                 ]
             }
         },
@@ -368,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "这是艺术家在连续追剧72小时后的意识流创作",
             "作品反映了艺术家对秃头危机的深刻思考",
             "这是一次外卖被偷吃后的愤怒创作",
-            "灵感源于艺术家第100次被催婚时的理状态",
+            "灵感源于艺家第100次被催婚时的理状态",
             "作品完成于连续加班30天后的某个凌晨"
         ],
 
@@ -635,7 +676,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // 扩充创作背景模板
+    // 扩充��作背景模板
     const backgroundTemplates = {
         realistic: [
             "作品创作于{year}年{season}，{artist}在{location}驻留期间的重要创作。这一时期艺术家正经历{personal_experience}，{emotional_state}。作品中运用了{technique}，呈现出{visual_effect}的效果。创作过程历时{duration}，期间{creative_process}。这件作品标志着艺术家在{artistic_exploration}上的重要突破，{significance}。",
@@ -1078,7 +1119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         infoDiv.style.display = 'block';
 
-        // 显示画布和下载按钮
+        // 显示画���和下载按钮
         canvas.style.display = 'inline-block';
         downloadBtn.style.display = 'inline-block';
     }
